@@ -77,12 +77,12 @@
       flex-direction: column;
       gap: 18px;
     }
-    .form-label {
+    label {
       font-size: 1rem;
       font-weight: 500;
       margin-bottom: 6px;
     }
-    .form-input {
+    input {
       width: 100%;
       padding: 16px 18px;
       border: none;
@@ -91,34 +91,6 @@
       font-size: 1rem;
       margin-bottom: 8px;
       outline: none;
-    }
-
-    .divider {
-      display: flex;
-      align-items: center;
-      margin: 26px 0 18px 0;
-      color: #888;
-      font-size: 0.98rem;
-      justify-content: center;
-    }
-    .social-buttons {
-      display: flex;
-      gap: 18px;
-      justify-content: center;
-      margin-top: 0;
-    }
-    .social-btn {
-      background: #f4f5f7;
-      color: #222;
-      border: none;
-      border-radius: 8px;
-      padding: 10px 26px;
-      font-size: 1rem;
-      font-weight: 500;
-      cursor: pointer;
-    }
-    .social-btn:hover {
-      background: #e3e5e8;
     }
     @media (max-width: 600px) {
       .header {
@@ -145,19 +117,12 @@
   <div class="main-content">
     <h1>Encontre sua próxima vaga em tecnologia</h1>
     <form class="form-container">
-      <label class="form-label" for="email">Endereço de e-mail</label>
-      <input class="form-input" type="email" id="email" placeholder="Digite seu e-mail">
-      <label class="form-label" for="senha">Senha</label>
-      <input class="form-input" type="password" id="senha" placeholder="Digite sua senha">
+      <label for="email">E-mail</label>
+      <input type="email" id="email" placeholder="Digite seu e-mail">
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" placeholder="Digite sua senha">
       <button class="form-btn" type="submit">Criar conta</button>
     </form>
-    <div class="divider">
-      <span>Ou continue com</span>
-    </div>
-    <div class="social-buttons">
-      <button class="social-btn">Google</button>
-      <button class="social-btn">Apple</button>
-    </div>
   </div>
 </body>
 </html>

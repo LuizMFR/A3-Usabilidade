@@ -10,7 +10,6 @@
       background: #fff;
       color: #111;
     }
-    /* Header */
     header {
       width: 100%;
       display: flex;
@@ -44,7 +43,7 @@
       align-items: center;
       gap: 16px;
     }
-    .search-bar {
+    header form {
       background: #f5f7fa;
       border-radius: 12px;
       padding: 6px 16px;
@@ -53,7 +52,7 @@
       border: 1px solid #eaeaea;
       margin-right: 8px;
     }
-    .search-bar input {
+    header input {
       border: none;
       background: transparent;
       outline: none;
@@ -86,7 +85,6 @@
       cursor: pointer;
       margin-left: 6px;
     }
-    /* Hero Section */
     .hero-section {
       width: 100%;
       display: flex;
@@ -175,7 +173,6 @@
     .hero-search button:hover {
       background: #1976d2;
     }
-    /* Destaque Empregos */
     .section {
       width: 100%;
       max-width: 1100px;
@@ -238,7 +235,6 @@
     .job-btn:hover {
       background: #1976d2;
     }
-    /* Categorias */
     .categories-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -295,22 +291,20 @@
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
     <div class="logo">
       <img src="Imagens/logo_techvagas.png" alt="Logo">
     </div>
     <div class="header-actions">
-      <form class="search-bar">
+      <form>
         <input type="text" placeholder="Pesquisar">
       </form>
       <button class="publish-btn">Publicar uma vaga</button>
-      <button class="icon-btn" title="Perfil ou menu">
+      <button class="icon-btn" title="Perfil">
         <svg width="22" height="22" fill="#222"><rect x="6" y="4" width="10" height="2" rx="1"/><rect x="6" y="10" width="10" height="2" rx="1"/><rect x="6" y="16" width="10" height="2" rx="1"/></svg>
       </button>
     </div>
   </header>
-  <!-- Hero Section -->
   <div class="hero-section">
     <div class="hero-card" style="background-image:url('Imagens/background.png');">
       <div class="hero-overlay"></div>
@@ -324,7 +318,6 @@
       </div>
     </div>
   </div>
-  <!-- Empregos em destaque -->
   <div class="section">
     <h1 class="section-title">Empregos em destaque</h1>
     <div class="jobs-list">
@@ -361,7 +354,6 @@
         <button class="job-btn">Ver trabalho</button>
       </div>
     </div>
-    <!-- Categorias -->
     <h1 class="section-title">Categorias de tecnologias</h1>
     <div class="categories-grid">
       <div class="category-card">

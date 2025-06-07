@@ -74,16 +74,23 @@
       background: #1976d2;
     }
     .icon-btn {
-      background: #f5f7fa;
-      border: none;
-      border-radius: 8px;
-      width: 38px;
-      height: 38px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      margin-left: 6px;
+    background: #f5f7fa;
+    border: none;
+    border-radius: 8px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 6px;
+    }
+    .profile-img {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
     }
     .container {
       display: flex;
@@ -204,19 +211,16 @@
       </form>
       <button class="publish-btn">Publicar uma vaga</button>
       <button class="icon-btn" title="Perfil">
-        <svg width="22" height="22" fill="#222"><rect x="6" y="4" width="10" height="2" rx="1"/><rect x="6" y="10" width="10" height="2" rx="1"/><rect x="6" y="16" width="10" height="2" rx="1"/></svg>
+        <img src="Imagens/perfil.png" class="profile-img" alt="Perfil">
       </button>
     </div>
   </header>
-
   <div class="container">
     <nav class="sidebar">
       <ul>
         <li class="active"><span>🌐</span>Explorar</li>
         <li><span>💼</span>Vagas</li>
-        <li><span>🔍</span>Buscar</li>
         <li><span>⏩</span>Respostas</li>
-        <li><span>📡</span>Seguindo</li>
         <li><span>👤</span>Perfil</li>
       </ul>
     </nav>

@@ -35,12 +35,9 @@
     }
     .header-btn {
       background: #4094f7;
-      color: #fff;
       border: none;
       border-radius: 10px;
       padding: 12px 28px;
-      font-size: 1rem;
-      font-weight: 600;
       cursor: pointer;
     }
     .form-btn {
@@ -58,6 +55,12 @@
     button:hover{
       background: #227be3;
     }
+    a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    } 
     .main-content {
       display: flex;
       flex-direction: column;
@@ -112,7 +115,7 @@
     <div class="logo">
       <img src="Imagens/logo_techvagas.png" alt="Logo">
     </div>
-    <button class="header-btn">Entrar</button>
+    <button class="header-btn"><a href="cadastro.html">Criar conta</a></button> 
   </header>
   <div class="main-content">
     <h1>Encontre sua próxima vaga em tecnologia</h1>
@@ -121,7 +124,7 @@
       <input type="email" id="email" placeholder="Digite seu e-mail">
       <label for="senha">Senha</label>
       <input type="password" id="senha" placeholder="Digite sua senha">
-      <button class="form-btn" type="submit">Criar conta</button>
+      <button class="form-btn" type="submit">Entrar</button>
     </form>
   </div>
 </body>

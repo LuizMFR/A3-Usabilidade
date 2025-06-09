@@ -98,6 +98,16 @@
       margin-bottom: 8px;
       outline: none;
     }
+    .eye-icon {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      fill: #555;
+    }
     @media (max-width: 600px) {
       .header {
         flex-direction: column;
@@ -126,10 +136,25 @@
       <label for="email">E-mail</label>
       <input type="email" id="email" placeholder="Digite seu e-mail">
       <label for="senha">Senha</label>
+      <div style="position: relative;">
       <input type="password" id="senha" placeholder="Digite sua senha">
-      <a href="principal.html">
+        <svg class="eye-icon" onclick="toggleSenha(this)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M12 6a9.77 9.77 0 0 1 8.94 5.5A9.77 9.77 0 0 1 12 17a9.77 9.77 0 0 1-8.94-5.5A9.77 9.77 0 0 1 12 6zm0 2a3.99 3.99 0 0 0-3.9 3.01 4 4 0 0 0 7.8 0A3.99 3.99 0 0 0 12 8z"/>
+        </svg>
+      </div>
       <button class="form-btn" type="submit">Entrar</button>
     </form>
   </div>
+
+    <script>
+    function toggleSenha(iconElement) {
+      const input = iconElement.previousElementSibling;
+      const isVisible = input.type === "text";
+      input.type = isVisible ? "password" : "text";
+      iconElement.style.fill = isVisible ? "#555" : "#1e88e5";
+    }
+    </script>
+
 </body>
 </html>

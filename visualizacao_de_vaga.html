@@ -1,47 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <title>Tech Vagas</title>
+  <meta charset="UTF-8">
+  <title>Vagas | Tech Vagas</title>
   <style>
-    
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
     body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #ffffff; 
-      color: #6b7280; 
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 16px;
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    background: #fafbfc;
+    color: #222;
     }
-    a, button {
-      font-family: inherit;
-    }
-    
-    .container {
-      background: #fff;
-      max-width: 960px;
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-    
     header {
+      width: 100%;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 12px 24px;
-      border-bottom: 1px solid #e5e7eb;
-      background: #fafafa;
+      justify-content: space-between;
+      padding: 24px 48px 24px 32px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #f2f2f2;
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
     .logo {
       width: 70px;
@@ -61,75 +41,60 @@
       max-height: 60px;
       object-fit: contain;
     }
-    .header-right {
+    .header-actions {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 16px;
     }
-    .search-wrapper {
-      position: relative;
-    }
-    .search-wrapper input[type="text"] {
-      padding: 6px 6px 6px 30px;
-      border: 1px solid #d1d5db;
-      border-radius: 6px;
-      font-size: 14px;
-      color: #6b7280;
-      background: #f9fafb;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-      outline-offset: 2px;
-    }
-    .search-wrapper input[type="text"]::placeholder {
-      color: #9ca3af;
-    }
-    .search-wrapper input[type="text"]:focus {
-      border-color: #2563eb;
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
-      background: white;
-      color: #111827;
-    }
-    .search-wrapper i {
-      position: absolute;
-      left: 8px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: #9ca3af;
-      font-size: 14px;
-      pointer-events: none;
-    }
-    button.btn-primary {
-      background-color: #2563eb;
-      color: white;
-      font-weight: 600;
-      font-size: 14px;
+    header form {
+      background: #f5f7fa;
+      border-radius: 12px;
       padding: 6px 16px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    button.btn-primary:hover {
-      background-color: #1e40af;
-    }
-    button.btn-user {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      border: 1px solid #d1d5db;
-      background: white;
-      color: #6b7280;
       display: flex;
-      justify-content: center;
       align-items: center;
-      font-size: 18px;
+      border: 1px solid #eaeaea;
+      margin-right: 8px;
+    }
+    header input {
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: 1rem;
+      padding: 8px 0;
+      width: 180px;
+    }
+    .publish-btn {
+      background: #2196f3;
+      color: #fff;
+      border: none;
+      padding: 10px 26px;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
       cursor: pointer;
-      transition: color 0.3s ease;
     }
-    button.btn-user:hover {
-      color: #374151;
-      border-color: #9ca3af;
+    .publish-btn:hover {
+      background: #1976d2;
     }
-   
+    .icon-btn {
+    background: #f5f7fa;
+    border: none;
+    border-radius: 8px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 6px;
+    }
+    .profile-img {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+    }
     main {
       padding: 36px 36px;
       color: #374151;
@@ -239,34 +204,24 @@
       background-color: #1e40af;
     }
   </style>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter&amp;display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="container" role="main">
-    <!-- Header -->
-    <header>
-      <div class="logo">
-     <img src="Imagens/logo_techvagas.png" alt="logo" />
+  <header>
+    <div class="logo">
+      <img src="Imagens/logo_techvagas.png" alt="Logo">
     </div>
-      <div class="header-right">
-        <div class="search-wrapper">
-          <input
-            type="text"
-            placeholder="Pesquisar"
-            aria-label="Pesquisar"
-            autocomplete="off"
-          />
-          <i class="fas fa-search" aria-hidden="true"></i>
-        </div>
-        <button type="button" class="btn-primary">Pesquisar vaga</button>
-        <button type="button" class="btn-user" aria-label="User account">
-          <i class="fas fa-user-circle" aria-hidden="true"></i>
-        </button>
-      </div>
-    </header>
-
+    <div class="header-actions">
+      <form>
+        <input type="text" placeholder="Pesquisar">
+      </form>
+      <button class="publish-btn">Pesquisar vaga</button>
+      <button class="icon-btn" title="Perfil">
+        <img src="Imagens/perfil.png" class="profile-img" alt="Perfil">
+      </button>
+    </div>
+  </header>
     <main>
+      <section class="profile-card">
       <div class="center">
         <img
           src="Google Gemini_files/unnamed(1).png"
@@ -332,7 +287,5 @@
     <footer>
       <button type="button">Candidatar-se</button>
     </footer>
-  </div>
 </body>
 </html>
-

@@ -87,6 +87,19 @@
     p a:hover {
     text-decoration: underline;
     }
+    #password-strength-bar {
+  border-radius: 4px;
+  overflow: hidden;
+}
+#password-strength-indicator {
+  transition: width 0.3s;
+}
+#password-strength-text {
+  display: block;
+  margin-top: 4px;
+  font-weight: bold;
+}
+
   </style>
 </head>
 <body>
@@ -101,8 +114,13 @@
         <label for="email">E-mail</label>
         <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
 
-        <label for="senha">Senha</label>
+        <label for="senha">Senha:</label>
         <input type="password" id="senha" name="senha" placeholder="Crie uma senha" required>
+        <div id="password-strength-bar" style="height: 8px; width: 100%; background: #eee; margin-top: 4px;">
+          <div id="password-strength-indicator" style="height: 100%; width: 0%; background: red;"></div>
+        </div>
+        <small id="password-strength-text"></small>
+
 
         <button type="submit">Criar conta</button>
       </form>
@@ -110,4 +128,54 @@
     </section>
   </main>
 </body>
+<script>
+  const senhaInput = document.getElementById('senha');
+const strengthBar = document.getElementById('password-strength-indicator');
+const strengthText = document.getElementById('password-strength-text');
+
+senhaInput.addEventListener('input', function() {
+  const senha = senhaInput.value;
+  let score = 0;
+
+  // Critérios de força
+  if (senha.length >= 8) score++;
+  if (/[A-Z]/.test(senha) && /[a-z]/.test(senha)) score++;
+  if (/\d/.test(senha)) score++;
+  if (/[^A-Za-z0-9]/.test(senha)) score++;
+
+  // Atualização visual
+  let strength = '';
+  let color = '';
+  let width = '';
+
+  switch (score) {
+    case 0:
+    case 1:
+      strength = 'Senha fraca';
+      color = 'red';
+      width = '25%';
+      break;
+    case 2:
+      strength = 'Senha média';
+      color = 'orange';
+      width = '50%';
+      break;
+    case 3:
+      strength = 'Senha forte';
+      color = 'blue';
+      width = '75%';
+      break;
+    case 4:
+      strength = 'Senha muito forte';
+      color = 'green';
+      width = '100%';
+      break;
+  }
+
+  strengthBar.style.width = width;
+  strengthBar.style.background = color;
+  strengthText.textContent = strength;
+});
+</script>
+
 </html>

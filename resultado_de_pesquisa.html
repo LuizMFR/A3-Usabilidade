@@ -1,15 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
-  <title>Encontre o emprego dos seus sonhos em tecnologia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <title>Tech Vagas</title>
   <style>
     body {
       margin: 0;
       font-family: 'Inter', Arial, sans-serif;
       background: #fff;
       color: #111;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+
+    main {
+      flex: 1;
+      padding: 48px 48px 0 48px;
+      min-width: 0;
     }
 
     header {
@@ -107,9 +129,61 @@
       display: block;
     }
 
-    .container {
+    .results h2 {
+      margin-top: 30px;
+      font-size: 20px;
+    }
+
+    .results span {
+      font-weight: normal;
+      color: #666;
+    }
+
+    .tags {
+      margin: 10px 0;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #b1b1b1;
+      padding: 5px 10px;
+      margin-right: 5px;
+      border-radius: 15px;
+    }
+
+    .job-list {
+      margin-top: 20px;
+    }
+
+    .job-card {
       display: flex;
-      min-height: 100vh;
+      align-items: center;
+      background-color: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .thumbnail {
+      width: 230px;
+      height: 120px;
+      background-color: #000;
+      border-radius: 5px;
+      margin-right: 20px;
+    }
+
+    .job-info h4 {
+      margin-bottom: 5px;
+    }
+
+    .apply-btn {
+      margin-left: auto;
+      background-color: #2196F3;
+      color: white;
+      padding: 8px 12px;
+      text-decoration: none;
+      border-radius: 5px;
     }
 
     .sidebar {
@@ -149,87 +223,9 @@
       font-size: 20px;
     }
 
-    main {
-      flex: 1;
-      padding: 48px 48px 0 48px;
-      min-width: 0;
-    }
-
-    h1 {
-      font-size: 2.6rem;
-      font-weight: bold;
-      margin-bottom: 32px;
-      margin-top: 0;
-    }
-
-    .search-box {
-      width: 100%;
-      max-width: 500px;
-      margin-bottom: 40px;
-    }
-
-    .search-box input {
-      width: 100%;
-      padding: 16px 20px;
-      font-size: 1.1rem;
-      border: 1px solid #d1d5db;
-      border-radius: 12px;
-      outline: none;
-      background: #fafbfc;
-      transition: border 0.2s;
-    }
-
-    .search-box input:focus {
-      border-color: #a3a7b3;
-    }
-
-    h1 {
-      font-size: 1.35rem;
-      font-weight: 600;
-      margin: 32px 0 18px 0;
-    }
-
-    .tags-group {
+    .container {
       display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 8px;
-    }
-
-    h2 {
-      background: #f1f2f4;
-      color: #222;
-      border-radius: 16px;
-      padding: 8px 20px;
-      font-size: 1rem;
-      font-weight: 500;
-      cursor: pointer;
-      border: none;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
-      margin-bottom: 4px;
-    }
-
-    .tag:hover {
-      background: #e3e5e8;
-    }
-
-    @media (max-width: 900px) {
-      .container {
-        flex-direction: column;
-      }
-
-      .sidebar {
-        width: 100%;
-        height: auto;
-        border-right: none;
-        border-bottom: 1px solid #eee;
-        position: static;
-        padding: 12px 0 0 0;
-      }
-
-      main {
-        padding: 24px 12px 0 12px;
-      }
+      min-height: 100vh;
     }
   </style>
 </head>
@@ -252,42 +248,50 @@
   <div class="container">
     <nav class="sidebar">
       <ul>
-        <li class="active"><span>🌐</span>Explorar</li>
-        <li><span>💼</span>Vagas</li>
+        <li><span>🌐</span>Explorar</li>
+        <li class="active"><span>💼</span>Vagas</li>
         <li><span>⏩</span>Respostas</li>
         <li><span>👤</span>Perfil</li>
       </ul>
     </nav>
-    <main>
-      <h1>Encontre o emprego dos seus sonhos em tecnologia</h1>
-      <div class="search-box">
-        <input type="text" placeholder="Pesquisas por título, empresa de tecnologia">
-      </div>
-      <h1>Pesquisas Populares</h1>
-      <div class="tags-group">
-        <h2>Engenheiro Frontend</h2>
-        <h2>React</h2>
-        <h2>Engenheiro Backend</h2>
-        <h2>Node.js</h2>
-        <h2>Engenheiro Full</h2>
-        <h2>Python</h2>
-        <h2>UI/UX Designer</h2>
-        <h2>Gerente de Produto</h2>
-      </div>
-      <h1>Pilha de tecnologia</h1>
-      <div class="tags-group">
-        <h2>React</h2>
-        <h2>Node.js</h2>
-        <h2>Python</h2>
-        <h2>TypeScript</h2>
-      </div>
-      <h1>Nível de Experiencia</h1>
-      <div class="tags-group">
-        <h2>Júnior</h2>
-        <h2>Pleno</h2>
-        <h2>Sênior</h2>
-      </div>
+    <main class="main-content">
+      <section class="results">
+        <h2>Pesquisa: <span>"Desenvolvedor front-end junior"</span></h2>
+        <div class="tags">
+          <span class="tag">Desenvolvedor</span>
+          <span class="tag">Front-end</span>
+          <span class="tag">Júnior</span>
+        </div>
+        <h3>Resultados encontrados:</h3>
+        <div class="job-list">
+          <div class="job-card">
+            <div class="thumbnail"></div>
+            <div class="job-info">
+              <h4>Desenvolvedor Front-End Junior</h4>
+              <p>Empresa S.A.<br>Remoto</p>
+            </div>
+            <a href="#" class="apply-btn">Ver vaga</a>
+          </div>
+          <div class="job-card">
+            <div class="thumbnail"></div>
+            <div class="job-info">
+              <h4>Desenvolvedor Front-End Pleno</h4>
+              <p>Empresa S.A.<br>Presencial</p>
+            </div>
+            <a href="#" class="apply-btn">Ver vaga</a>
+          </div>
+          <div class="job-card">
+            <div class="thumbnail"></div>
+            <div class="job-info">
+              <h4>Desenvolvedor Full-Stack Pleno</h4>
+              <p>Desenvolvedores S.A.<br>Híbrido</p>
+            </div>
+            <a href="#" class="apply-btn">Ver vaga</a>
+          </div>
+        </div>
+      </section>
     </main>
+  </div>
   </div>
 </body>
 

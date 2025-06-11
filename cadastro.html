@@ -137,13 +137,12 @@ senhaInput.addEventListener('input', function() {
   const senha = senhaInput.value;
   let score = 0;
 
-  // Critérios de força
+
   if (senha.length >= 8) score++;
   if (/[A-Z]/.test(senha) && /[a-z]/.test(senha)) score++;
   if (/\d/.test(senha)) score++;
   if (/[^A-Za-z0-9]/.test(senha)) score++;
 
-  // Atualização visual
   let strength = '';
   let color = '';
   let width = '';

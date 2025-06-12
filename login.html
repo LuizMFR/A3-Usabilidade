@@ -161,8 +161,8 @@
 
       function compararComLocalStorage(e) {
         e.preventDefault();
-        const emailCadastrado = localStorage.getItem('email');
-        const senhaCadastrada = localStorage.getItem('senha');
+        const emailCadastrado = sessionStorage.getItem('email');
+        const senhaCadastrada = sessionStorage.getItem('senha');
         const email = document.getElementById('email').value;
         const senha = document.getElementById('senha').value;
         if (email === emailCadastrado && senha === senhaCadastrada) {

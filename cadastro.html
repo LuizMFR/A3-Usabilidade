@@ -202,9 +202,9 @@
 
     function salvarDados(e) {
       e.preventDefault();
-      localStorage.setItem('nome', document.getElementById('nome').value);
-      localStorage.setItem('email', document.getElementById('email').value);
-      localStorage.setItem('senha', document.getElementById('senha').value);
+      sessionStorage.setItem('nome', document.getElementById('nome').value);
+      sessionStorage.setItem('email', document.getElementById('email').value);
+      sessionStorage.setItem('senha', document.getElementById('senha').value);
       window.location = 'login.html';
     }
 </script>

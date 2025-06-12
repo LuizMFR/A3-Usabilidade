@@ -118,7 +118,7 @@
     <section class="cadastro-card">
       <h1>Crie sua conta</h1>
       <p class="subtitle">Encontre sua próxima vaga em tecnologia</p>
-      <form>
+      <form method="get" onsubmit="salvarDados(event)">
         <label for="nome">Nome completo</label>
         <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
 
@@ -198,6 +198,14 @@
       const isVisible = input.type === "text";
       input.type = isVisible ? "password" : "text";
       iconElement.style.fill = isVisible ? "#555" : "#1e88e5";
+    }
+
+    function salvarDados(e) {
+      e.preventDefault();
+      localStorage.setItem('nome', document.getElementById('nome').value);
+      localStorage.setItem('email', document.getElementById('email').value);
+      localStorage.setItem('senha', document.getElementById('senha').value);
+      window.location = 'login.html';
     }
 </script>
 

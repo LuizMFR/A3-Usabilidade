@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <title>Página de Vagas em Tecnologia</title>
@@ -10,6 +11,7 @@
       background: #fff;
       color: #111;
     }
+
     header {
       width: 100%;
       display: flex;
@@ -85,10 +87,11 @@
       background: #1976d2;
     }
 
-    .header-actions .perfil img{
+    .header-actions .perfil img {
       max-width: 45px;
       max-height: 45px;
     }
+
     .hero-section {
       width: 100%;
       display: flex;
@@ -96,6 +99,7 @@
       margin-top: 36px;
       margin-bottom: 40px;
     }
+
     .hero-card {
       width: 70vw;
       max-width: 950px;
@@ -111,14 +115,16 @@
       background-image: url('hero.jpg');
       background-size: cover;
       background-position: center;
-      box-shadow: 0 2px 18px rgba(0,0,0,0.04);
+      box-shadow: 0 2px 18px rgba(0, 0, 0, 0.04);
     }
+
     .hero-overlay {
       position: absolute;
       inset: 0;
       background: rgba(24, 24, 24, 0.45);
       z-index: 1;
     }
+
     .hero-content {
       position: relative;
       z-index: 2;
@@ -131,18 +137,21 @@
       padding: 48px 18px 44px 18px;
       text-align: center;
     }
+
     .hero-title {
       font-size: 2.5rem;
       font-weight: bold;
       margin-bottom: 16px;
       line-height: 1.1;
     }
+
     .hero-subtitle {
       font-size: 1.1rem;
       margin-bottom: 32px;
       font-weight: 400;
       color: #eaeaea;
     }
+
     .hero-search {
       display: flex;
       width: 100%;
@@ -154,6 +163,7 @@
       box-sizing: border-box;
       margin: 0 auto;
     }
+
     .hero-search input {
       border: none;
       outline: none;
@@ -163,6 +173,7 @@
       padding: 12px 0;
       color: #222;
     }
+
     .hero-search button {
       background: #2196f3;
       color: #fff;
@@ -174,9 +185,11 @@
       cursor: pointer;
       margin-left: 8px;
     }
+
     .hero-search button:hover {
       background: #1976d2;
     }
+
     .section {
       width: 100%;
       max-width: 1100px;
@@ -184,22 +197,26 @@
       margin-bottom: 48px;
       padding: 0 18px;
     }
+
     .section-title {
       font-size: 1.35rem;
       font-weight: 700;
       margin: 32px 0 28px 0;
     }
+
     .jobs-list {
       display: flex;
       flex-direction: column;
       gap: 38px;
       margin-bottom: 32px;
     }
+
     .job-item {
       display: flex;
       align-items: center;
       gap: 32px;
     }
+
     .job-img {
       width: 260px;
       height: 150px;
@@ -208,6 +225,7 @@
       background: #eee;
       flex-shrink: 0;
     }
+
     .job-info {
       flex: 1;
       display: flex;
@@ -215,16 +233,19 @@
       align-items: flex-start;
       gap: 8px;
     }
+
     .job-title {
       font-size: 1.18rem;
       font-weight: 600;
       margin-bottom: 2px;
     }
+
     .job-location {
       color: #8795a1;
       font-size: 1.01rem;
       margin: 2px;
     }
+
     .job-btn {
       background: #2196f3;
       color: #fff;
@@ -236,9 +257,11 @@
       cursor: pointer;
       margin-left: auto;
     }
+
     .job-btn:hover {
       background: #1976d2;
     }
+
     .categories-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -246,6 +269,7 @@
       margin-top: 18px;
       margin-bottom: 48px;
     }
+
     .category-card {
       display: flex;
       flex-direction: column;
@@ -253,16 +277,18 @@
       background: #fafbfc;
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 1px 8px rgba(0,0,0,0.03);
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.03);
       min-height: 200px;
       padding-bottom: 8px;
       transition: box-shadow 0.18s;
     }
+
     .category-card:hover {
-      box-shadow: 0 8px 32px rgba(33,150,243,0.25);
+      box-shadow: 0 8px 32px rgba(33, 150, 243, 0.25);
       transform: scale(1.03);
       background: #e3f2fd;
     }
+
     .category-img {
       width: 100%;
       height: 100%;
@@ -270,6 +296,7 @@
       background: #eee;
       margin-bottom: 8px;
     }
+
     .category-title {
       font-size: 1.08rem;
       font-weight: 500;
@@ -277,23 +304,64 @@
       margin: 8px 0 0 0;
       color: #23272f;
     }
+
     @media (max-width: 900px) {
-      .hero-card { width: 98vw; }
-      .section { max-width: 99vw; }
-      .job-item { flex-direction: column; align-items: flex-start; gap: 14px; }
-      .job-img { width: 100%; max-width: 360px; height: 160px; }
+      .hero-card {
+        width: 98vw;
+      }
+
+      .section {
+        max-width: 99vw;
+      }
+
+      .job-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+      }
+
+      .job-img {
+        width: 100%;
+        max-width: 360px;
+        height: 160px;
+      }
     }
+
     @media (max-width: 600px) {
-      header { flex-direction: column; align-items: flex-start; padding: 16px 8px; }
-      .hero-title { font-size: 1.3rem; }
-      .hero-card { min-height: 220px; }
-      .section-title { font-size: 1.1rem; }
-      .categories-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-      .category-card { min-height: 140px; }
-      .job-img { height: 110px; }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 8px;
+      }
+
+      .hero-title {
+        font-size: 1.3rem;
+      }
+
+      .hero-card {
+        min-height: 220px;
+      }
+
+      .section-title {
+        font-size: 1.1rem;
+      }
+
+      .categories-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .category-card {
+        min-height: 140px;
+      }
+
+      .job-img {
+        height: 110px;
+      }
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="logo">
@@ -405,4 +473,5 @@
     </div>
   </div>
 </body>
+
 </html>

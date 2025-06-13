@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <title>Login</title>
@@ -10,6 +11,7 @@
       background: #fff;
       color: #111;
     }
+
     header {
       width: 100%;
       display: flex;
@@ -20,12 +22,13 @@
       border-bottom: 1px solid #f2f2f2;
       height: 6rem;
     }
+
     .logo {
       width: 70px;
       height: 70px;
       border-radius: 50%;
       background: #fff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -33,11 +36,13 @@
       overflow: hidden;
       flex-shrink: 0;
     }
+
     .logo img {
       max-width: 60px;
       max-height: 60px;
       object-fit: contain;
     }
+
     .header-btn {
       background: #4094f7;
       border: none;
@@ -45,9 +50,11 @@
       padding: 12px 28px;
       cursor: pointer;
     }
-    .header-btn:hover{
+
+    .header-btn:hover {
       background: #227be3;
     }
+
     .form-btn {
       width: 100%;
       background: #4094f7;
@@ -60,27 +67,32 @@
       cursor: pointer;
       margin-top: 8px;
     }
-    button:hover{
+
+    button:hover {
       background: #227be3;
-    } 
+    }
+
     a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 600;
-    } 
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
     .main-content {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-top: 40px;
     }
+
     .main-content h1 {
       font-size: 2.5rem;
       font-weight: bold;
       margin-bottom: 42px;
       text-align: center;
     }
+
     .form-container {
       width: 100%;
       max-width: 420px;
@@ -88,11 +100,13 @@
       flex-direction: column;
       gap: 18px;
     }
+
     label {
       font-size: 1rem;
       font-weight: 500;
       margin-bottom: 6px;
     }
+
     input {
       width: 92%;
       padding: 16px 18px;
@@ -103,6 +117,7 @@
       margin-bottom: 8px;
       outline: none;
     }
+
     .eye-icon {
       position: absolute;
       right: 16px;
@@ -113,21 +128,25 @@
       height: 24px;
       fill: #555;
     }
+
     @media (max-width: 600px) {
       .header {
         flex-direction: column;
         align-items: flex-start;
         padding: 16px 12px;
       }
+
       .main-content h1 {
         font-size: 1.4rem;
       }
+
       .form-container {
         max-width: 98vw;
       }
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="logo">
@@ -142,37 +161,39 @@
       <input type="email" id="email" placeholder="Digite seu e-mail">
       <label for="senha">Senha</label>
       <div style="position: relative;">
-      <input type="password" id="senha" placeholder="Digite sua senha">
+        <input type="password" id="senha" placeholder="Digite sua senha">
         <svg class="eye-icon" onclick="toggleSenha(this)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M0 0h24v24H0z" fill="none"/>
-          <path d="M12 6a9.77 9.77 0 0 1 8.94 5.5A9.77 9.77 0 0 1 12 17a9.77 9.77 0 0 1-8.94-5.5A9.77 9.77 0 0 1 12 6zm0 2a3.99 3.99 0 0 0-3.9 3.01 4 4 0 0 0 7.8 0A3.99 3.99 0 0 0 12 8z"/>
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M12 6a9.77 9.77 0 0 1 8.94 5.5A9.77 9.77 0 0 1 12 17a9.77 9.77 0 0 1-8.94-5.5A9.77 9.77 0 0 1 12 6zm0 2a3.99 3.99 0 0 0-3.9 3.01 4 4 0 0 0 7.8 0A3.99 3.99 0 0 0 12 8z" />
         </svg>
       </div>
       <button class="form-btn" type="submit">Entrar</button>
     </form>
   </div>
 
-    <script>
-      function toggleSenha(iconElement) {
-        const input = iconElement.previousElementSibling;
-        const isVisible = input.type === "text";
-        input.type = isVisible ? "password" : "text";
-        iconElement.style.fill = isVisible ? "#555" : "#1e88e5";
-      }
+  <script>
+    function toggleSenha(iconElement) {
+      const input = iconElement.previousElementSibling;
+      const isVisible = input.type === "text";
+      input.type = isVisible ? "password" : "text";
+      iconElement.style.fill = isVisible ? "#555" : "#1e88e5";
+    }
 
-      function compararComLocalStorage(e) {
-        e.preventDefault();
-        const emailCadastrado = sessionStorage.getItem('email');
-        const senhaCadastrada = sessionStorage.getItem('senha');
-        const email = document.getElementById('email').value;
-        const senha = document.getElementById('senha').value;
-        if (email === emailCadastrado && senha === senhaCadastrada) {
-          window.location.href = "principal.html";
-        } else {
-          alert('E-mail ou senha incorretos.');
-        }
+    function compararComLocalStorage(e) {
+      e.preventDefault();
+      const emailCadastrado = sessionStorage.getItem('email');
+      const senhaCadastrada = sessionStorage.getItem('senha');
+      const email = document.getElementById('email').value;
+      const senha = document.getElementById('senha').value;
+      if (email === emailCadastrado && senha === senhaCadastrada) {
+        window.location.href = "principal.html";
+      } else {
+        alert('E-mail ou senha incorretos.');
       }
+    }
 
-    </script>
+  </script>
 </body>
+
 </html>

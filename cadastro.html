@@ -1,118 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <title>Cadastro | Tech Vagas</title>
   <style>
     body {
-    margin: 0;
-    font-family: 'Inter', Arial, sans-serif;
-    background: #fff;
-    color: #111;
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      background: #fff;
+      color: #111;
     }
+
     main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
     }
+
     .cadastro-card {
-    background: #fff;
-    padding: 40px 32px 32px 32px;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px 0 #0001;
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
+      background: #fff;
+      padding: 40px 32px 32px 32px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px 0 #0001;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
     }
+
     .cadastro-card h1 {
-    margin-bottom: 8px;
-    font-size: 2rem;
-    font-weight: 700;
+      margin-bottom: 8px;
+      font-size: 2rem;
+      font-weight: 700;
     }
+
     .cadastro-card .subtitle {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 24px;
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 24px;
     }
+
     .cadastro-card form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 16px;
     }
+
     .cadastro-card label {
-    text-align: left;
-    font-size: 1rem;
-    margin-bottom: 4px;
-    color: #222;
-    font-weight: 500;
+      text-align: left;
+      font-size: 1rem;
+      margin-bottom: 4px;
+      color: #222;
+      font-weight: 500;
     }
+
     .cadastro-card input {
       width: 93%;
-    padding: 12px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 1rem;
-    background: #f7fafd;
-    transition: border 0.2s;
+      padding: 12px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #f7fafd;
+      transition: border 0.2s;
     }
+
     .cadastro-card input:focus {
-    border: 1.5px solid #339cff;
-    outline: none;
+      border: 1.5px solid #339cff;
+      outline: none;
     }
+
     button {
-    background: #339cff;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 0;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: 8px;
+      background: #339cff;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 8px;
 
     }
+
     button:hover {
-    background: #1976d2;
+      background: #1976d2;
     }
-    p {
-    margin-top: 12px;
-    font-size: 1rem;
-    }
-    p a {
-    color: #339cff;
-    text-decoration: none;
-    font-weight: 500;
-    } 
-    p a:hover {
-    text-decoration: underline;
-    }
-    #password-strength-bar {
-  border-radius: 4px;
-  overflow: hidden;
-}
-#password-strength-indicator {
-  transition: width 0.3s;
-}
-#password-strength-text {
-  display: block;
-  margin-top: 4px;
-  font-weight: bold;
-}
-.eye-icon {
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  width: 24px;
-  height: 24px;
-  fill: #555;
-}
 
+    p {
+      margin-top: 12px;
+      font-size: 1rem;
+    }
+
+    p a {
+      color: #339cff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    p a:hover {
+      text-decoration: underline;
+    }
+
+    #password-strength-bar {
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    #password-strength-indicator {
+      transition: width 0.3s;
+    }
+
+    #password-strength-text {
+      display: block;
+      margin-top: 4px;
+      font-weight: bold;
+    }
+
+    .eye-icon {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      fill: #555;
+    }
   </style>
 </head>
+
 <body>
   <main>
     <section class="cadastro-card">
@@ -127,11 +145,12 @@
 
         <label for="senha">Senha:</label>
         <div style="position: relative;">
-        <input type="password" id="senha" name="senha" placeholder="Crie uma senha" required>
-        <svg class="eye-icon" onclick="toggleSenha(this)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M0 0h24v24H0z" fill="none"/>
-          <path d="M12 6a9.77 9.77 0 0 1 8.94 5.5A9.77 9.77 0 0 1 12 17a9.77 9.77 0 0 1-8.94-5.5A9.77 9.77 0 0 1 12 6zm0 2a3.99 3.99 0 0 0-3.9 3.01 4 4 0 0 0 7.8 0A3.99 3.99 0 0 0 12 8z"/>
-        </svg>
+          <input type="password" id="senha" name="senha" placeholder="Crie uma senha" required>
+          <svg class="eye-icon" onclick="toggleSenha(this)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M12 6a9.77 9.77 0 0 1 8.94 5.5A9.77 9.77 0 0 1 12 17a9.77 9.77 0 0 1-8.94-5.5A9.77 9.77 0 0 1 12 6zm0 2a3.99 3.99 0 0 0-3.9 3.01 4 4 0 0 0 7.8 0A3.99 3.99 0 0 0 12 8z" />
+          </svg>
         </div>
         <div id="password-strength-bar" style="height: 8px; width: 100%; background: #eee; margin-top: 4px;">
           <div id="password-strength-indicator" style="height: 100%; width: 0%; background: red;"></div>
@@ -150,7 +169,7 @@
   const strengthBar = document.getElementById('password-strength-indicator');
   const strengthText = document.getElementById('password-strength-text');
 
-  senhaInput.addEventListener('input', function() {
+  senhaInput.addEventListener('input', function () {
     const senha = senhaInput.value;
     let score = 0;
 
@@ -193,20 +212,20 @@
     strengthText.textContent = strength;
   });
 
-    function toggleSenha(iconElement) {
-      const input = iconElement.previousElementSibling;
-      const isVisible = input.type === "text";
-      input.type = isVisible ? "password" : "text";
-      iconElement.style.fill = isVisible ? "#555" : "#1e88e5";
-    }
+  function toggleSenha(iconElement) {
+    const input = iconElement.previousElementSibling;
+    const isVisible = input.type === "text";
+    input.type = isVisible ? "password" : "text";
+    iconElement.style.fill = isVisible ? "#555" : "#1e88e5";
+  }
 
-    function salvarDados(e) {
-      e.preventDefault();
-      sessionStorage.setItem('nome', document.getElementById('nome').value);
-      sessionStorage.setItem('email', document.getElementById('email').value);
-      sessionStorage.setItem('senha', document.getElementById('senha').value);
-      window.location = 'login.html';
-    }
+  function salvarDados(e) {
+    e.preventDefault();
+    sessionStorage.setItem('nome', document.getElementById('nome').value);
+    sessionStorage.setItem('email', document.getElementById('email').value);
+    sessionStorage.setItem('senha', document.getElementById('senha').value);
+    window.location = 'login.html';
+  }
 </script>
 
 </html>

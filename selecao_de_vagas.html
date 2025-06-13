@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Encontre o emprego dos seus sonhos em tecnologia</title>
+  <script src="script.js" defer></script>
   <style>
     body {
       margin: 0;
@@ -247,19 +248,19 @@
     </nav>
     <main>
       <h1>Encontre o emprego dos seus sonhos em tecnologia</h1>
-      <form class="search-box" method="get" onsubmit="salvarDados(event)">
+      <form class="search-box" method="get" onsubmit="salvarDadosPesquisa(event, 'pesquisa')">
         <input type="text" id="pesquisa" name="pesquisa" placeholder="Pesquisas por título, empresa de tecnologia">
       </form>
       <h1>Pesquisas Populares</h1>
       <div class="tags-group">
-        <h2>Engenheiro Frontend</h2>
-        <h2>React</h2>
-        <h2>Engenheiro Backend</h2>
-        <h2>Node.js</h2>
-        <h2>Engenheiro Full</h2>
-        <h2>Python</h2>
-        <h2>UI/UX Designer</h2>
-        <h2>Gerente de Produto</h2>
+        <h2 onclick="pesquisarTag(this)">Engenheiro Frontend</h2>
+        <h2 onclick="pesquisarTag(this)">React</h2>
+        <h2 onclick="pesquisarTag(this)">Engenheiro Backend</h2>
+        <h2 onclick="pesquisarTag(this)">Node.js</h2>
+        <h2 onclick="pesquisarTag(this)">Engenheiro Full</h2>
+        <h2 onclick="pesquisarTag(this)">Python</h2>
+        <h2 onclick="pesquisarTag(this)">UI/UX Designer</h2>
+        <h2 onclick="pesquisarTag(this)">Gerente de Produto</h2>
       </div>
       <h1>Pilha de tecnologia</h1>
       <div class="tags-group">
@@ -276,13 +277,6 @@
       </div>
     </main>
   </div>
-  <script>
-    function salvarDados(e) {
-      e.preventDefault();
-      sessionStorage.setItem('pesquisa', document.getElementById('pesquisa').value);
-      window.location = 'resultado_de_pesquisa.html';
-    }
-  </script>
 </body>
 
 </html>

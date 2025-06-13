@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Login</title>
+  <script src="script.js" defer></script>
   <style>
     body {
       margin: 0;
@@ -173,12 +174,6 @@
   </div>
 
   <script>
-    function toggleSenha(iconElement) {
-      const input = iconElement.previousElementSibling;
-      const isVisible = input.type === "text";
-      input.type = isVisible ? "password" : "text";
-      iconElement.style.fill = isVisible ? "#555" : "#1e88e5";
-    }
 
     function compararComLocalStorage(e) {
       e.preventDefault();

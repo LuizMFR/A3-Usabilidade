@@ -240,16 +240,16 @@
     <nav class="sidebar">
       <ul>
         <li class="active"><span>🌐</span>Explorar</li>
-        <li><span>💼</span>Vagas</li>
+        <li onclick="window.location.href='resultado_de_pesquisa.html'"><span>💼</span>Vagas</li>
         <li><span>⏩</span>Respostas</li>
-        <li><span>👤</span>Perfil</li>
+        <li onclick="window.location.href='perfil.html'"><span>👤</span>Perfil</li>
       </ul>
     </nav>
     <main>
       <h1>Encontre o emprego dos seus sonhos em tecnologia</h1>
-      <div class="search-box">
-        <input type="text" placeholder="Pesquisas por título, empresa de tecnologia">
-      </div>
+      <form class="search-box" method="get" onsubmit="salvarDados(event)">
+        <input type="text" id="pesquisa" name="pesquisa" placeholder="Pesquisas por título, empresa de tecnologia">
+      </form>
       <h1>Pesquisas Populares</h1>
       <div class="tags-group">
         <h2>Engenheiro Frontend</h2>
@@ -276,6 +276,13 @@
       </div>
     </main>
   </div>
+  <script>
+    function salvarDados(e) {
+      e.preventDefault();
+      sessionStorage.setItem('pesquisa', document.getElementById('pesquisa').value);
+      window.location = 'resultado_de_pesquisa.html';
+    }
+  </script>
 </body>
 
 </html>

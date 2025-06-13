@@ -245,7 +245,7 @@
       <div class="center">
         <img src="Imagens/EcoSoluções Brasil.png" alt="Logo" width="80" height="80" />
         <h1>EcoSoluções Brasil</h1>
-        <p>Consultor(a) de Sustentabilidade e Energias Renováveis</p>
+        <p id="pesquisa"></p>
       </div>
 
       <section>
@@ -320,6 +320,10 @@
   <footer>
     <button type="button">Candidatar-se</button>
   </footer>
+  <script>
+    const pesquisa = sessionStorage.getItem('pesquisa');
+    document.getElementById('pesquisa').textContent = pesquisa ? pesquisa : "resultado";
+  </script>
 </body>
 
 </html>

@@ -163,69 +163,69 @@
       <p class="login-link">Já tem conta? <a href="login.html">Entrar</a></p>
     </section>
   </main>
-</body>
-<script>
-  const senhaInput = document.getElementById('senha');
-  const strengthBar = document.getElementById('password-strength-indicator');
-  const strengthText = document.getElementById('password-strength-text');
+  <script>
+    const senhaInput = document.getElementById('senha');
+    const strengthBar = document.getElementById('password-strength-indicator');
+    const strengthText = document.getElementById('password-strength-text');
 
-  senhaInput.addEventListener('input', function () {
-    const senha = senhaInput.value;
-    let score = 0;
+    senhaInput.addEventListener('input', function () {
+      const senha = senhaInput.value;
+      let score = 0;
 
 
-    if (senha.length >= 8) score++;
-    if (/[A-Z]/.test(senha) && /[a-z]/.test(senha)) score++;
-    if (/\d/.test(senha)) score++;
-    if (/[^A-Za-z0-9]/.test(senha)) score++;
+      if (senha.length >= 8) score++;
+      if (/[A-Z]/.test(senha) && /[a-z]/.test(senha)) score++;
+      if (/\d/.test(senha)) score++;
+      if (/[^A-Za-z0-9]/.test(senha)) score++;
 
-    let strength = '';
-    let color = '';
-    let width = '';
+      let strength = '';
+      let color = '';
+      let width = '';
 
-    switch (score) {
-      case 0:
-      case 1:
-        strength = 'Senha fraca';
-        color = 'red';
-        width = '25%';
-        break;
-      case 2:
-        strength = 'Senha média';
-        color = 'orange';
-        width = '50%';
-        break;
-      case 3:
-        strength = 'Senha forte';
-        color = 'blue';
-        width = '75%';
-        break;
-      case 4:
-        strength = 'Senha muito forte';
-        color = 'green';
-        width = '100%';
-        break;
+      switch (score) {
+        case 0:
+        case 1:
+          strength = 'Senha fraca';
+          color = 'red';
+          width = '25%';
+          break;
+        case 2:
+          strength = 'Senha média';
+          color = 'orange';
+          width = '50%';
+          break;
+        case 3:
+          strength = 'Senha forte';
+          color = 'blue';
+          width = '75%';
+          break;
+        case 4:
+          strength = 'Senha muito forte';
+          color = 'green';
+          width = '100%';
+          break;
+      }
+
+      strengthBar.style.width = width;
+      strengthBar.style.background = color;
+      strengthText.textContent = strength;
+    });
+
+    function toggleSenha(iconElement) {
+      const input = iconElement.previousElementSibling;
+      const isVisible = input.type === "text";
+      input.type = isVisible ? "password" : "text";
+      iconElement.style.fill = isVisible ? "#555" : "#1e88e5";
     }
 
-    strengthBar.style.width = width;
-    strengthBar.style.background = color;
-    strengthText.textContent = strength;
-  });
-
-  function toggleSenha(iconElement) {
-    const input = iconElement.previousElementSibling;
-    const isVisible = input.type === "text";
-    input.type = isVisible ? "password" : "text";
-    iconElement.style.fill = isVisible ? "#555" : "#1e88e5";
-  }
-
-  function salvarDados(e) {
-    e.preventDefault();
-    sessionStorage.setItem('nome', document.getElementById('nome').value);
-    sessionStorage.setItem('email', document.getElementById('email').value);
-    sessionStorage.setItem('senha', document.getElementById('senha').value);
-    window.location = 'login.html';
-  }
-</script>
+    function salvarDados(e) {
+      e.preventDefault();
+      sessionStorage.setItem('nome', document.getElementById('nome').value);
+      sessionStorage.setItem('email', document.getElementById('email').value);
+      sessionStorage.setItem('senha', document.getElementById('senha').value);
+      window.location = 'login.html';
+    }
+  </script>
+</body>
 
 </html>

@@ -222,15 +222,15 @@
   <div class="container">
     <nav class="sidebar">
       <ul>
-        <li><span>🌐</span>Explorar</li>
+        <li onclick="window.location.href='selecao_de_vagas.html'"><span>🌐</span>Explorar</li>
         <li class="active"><span>💼</span>Vagas</li>
         <li><span>⏩</span>Respostas</li>
-        <li><span>👤</span>Perfil</li>
+        <li onclick="window.location.href='perfil.html'"><span>👤</span>Perfil</li>
       </ul>
     </nav>
     <main class="main-content">
       <section class="results">
-        <h2>Pesquisa: <span>"Desenvolvedor front-end junior"</span></h2>
+        <h2>Pesquisa: <span id="pesquisa"></span></h2>
         <div class="tags">
           <span class="tag">Desenvolvedor</span>
           <span class="tag">Front-end</span>
@@ -241,32 +241,51 @@
           <div class="job-card">
             <div class="thumbnail"></div>
             <div class="job-info">
-              <h4>Desenvolvedor Front-End Junior</h4>
+              <h4 id="vagaJunior"> </h4>
               <p>Empresa S.A.<br>Remoto</p>
             </div>
-            <a href="#" class="apply-btn">Ver vaga</a>
+            <a href="visualizacao_de_vaga.html" class="apply-btn">Ver vaga</a>
           </div>
           <div class="job-card">
             <div class="thumbnail"></div>
             <div class="job-info">
-              <h4>Desenvolvedor Front-End Pleno</h4>
+              <h4 id="vagaPleno"></h4>
               <p>Empresa S.A.<br>Presencial</p>
             </div>
-            <a href="#" class="apply-btn">Ver vaga</a>
+            <a href="visualizacao_de_vaga.html" class="apply-btn">Ver vaga</a>
           </div>
           <div class="job-card">
             <div class="thumbnail"></div>
             <div class="job-info">
-              <h4>Desenvolvedor Full-Stack Pleno</h4>
+              <h4 id="vagaSenior"></h4>
               <p>Desenvolvedores S.A.<br>Híbrido</p>
             </div>
-            <a href="#" class="apply-btn">Ver vaga</a>
+            <a href="visualizacao_de_vaga.html" class="apply-btn">Ver vaga</a>
           </div>
         </div>
       </section>
     </main>
   </div>
   </div>
+  <script>
+    const pesquisa = sessionStorage.getItem('pesquisa');
+    document.getElementById('pesquisa').textContent = pesquisa ? pesquisa : "resultado";
+
+    const vagaJunior = document.getElementById('vagaJunior');
+    if (vagaJunior && pesquisa) {
+      vagaJunior.textContent = pesquisa + ' Júnior';
+    }
+
+    const vagaPleno = document.getElementById('vagaPleno');
+    if (vagaPleno && pesquisa) {
+      vagaPleno.textContent = pesquisa + ' Pleno';
+    }
+
+    const vagaSenior = document.getElementById('vagaSenior');
+    if (vagaSenior && pesquisa) {
+      vagaSenior.textContent = pesquisa + ' Senior';
+    }
+  </script>
 </body>
 
 </html>

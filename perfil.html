@@ -258,14 +258,14 @@
       <div class="avatar">
         <img src="Imagens/avatar.jpg" alt="Avatar" />
       </div>
-      <h1>Dieimes</h1>
-      <span class="cargo">desenvolvedor junior</span>
+      <h1 id="nome-usuario"></h1> </h1>
+      <span class="cargo">Sua profição</span>
 
       <div class="info-section">
         <h2>Informações pessoais</h2>
         <p class="info-item">
           <img src="Imagens/email-icon.webp" alt="E-mail" class="icon">
-          <a href="mailto:nome@email.com.br">Dieimes@email.com.br</a>
+          <a href="mailto:nome@email.com.br">seuEmail@email.com.br</a>
         </p>
         <p class="info-item">
           <img src="Imagens/location-icon.png" alt="Localização" class="icon">
@@ -307,5 +307,9 @@
       </div>
     </section>
   </main>
+  <script>
+    const nome = sessionStorage.getItem('nome');
+    document.getElementById('nome-usuario').textContent = nome ? nome : "Usuário";
+  </script>
 </body>
 </html>

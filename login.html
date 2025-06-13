@@ -136,7 +136,7 @@
   </header>
   <div class="main-content">
     <h1>Encontre sua próxima vaga em tecnologia</h1>
-    <form class="form-container">
+    <form class="form-container" onsubmit="compararComLocalStorage(event)">
       <label for="email">E-mail</label>
       <input type="email" id="email" placeholder="Digite seu e-mail">
       <label for="senha">Senha</label>
@@ -152,13 +152,26 @@
   </div>
 
     <script>
-    function toggleSenha(iconElement) {
-      const input = iconElement.previousElementSibling;
-      const isVisible = input.type === "text";
-      input.type = isVisible ? "password" : "text";
-      iconElement.style.fill = isVisible ? "#555" : "#1e88e5";
-    }
-    </script>
+      function toggleSenha(iconElement) {
+        const input = iconElement.previousElementSibling;
+        const isVisible = input.type === "text";
+        input.type = isVisible ? "password" : "text";
+        iconElement.style.fill = isVisible ? "#555" : "#1e88e5";
+      }
 
+      function compararComLocalStorage(e) {
+        e.preventDefault();
+        const emailCadastrado = sessionStorage.getItem('email');
+        const senhaCadastrada = sessionStorage.getItem('senha');
+        const email = document.getElementById('email').value;
+        const senha = document.getElementById('senha').value;
+        if (email === emailCadastrado && senha === senhaCadastrada) {
+          window.location.href = "principal.html";
+        } else {
+          alert('E-mail ou senha incorretos.');
+        }
+      }
+
+    </script>
 </body>
 </html>

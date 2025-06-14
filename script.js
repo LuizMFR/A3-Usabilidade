@@ -8,6 +8,7 @@ function salvarDadosPesquisa(event, inputId) {
     event.preventDefault();
     const valorPesquisa = document.getElementById(inputId).value;
     if (!valorPesquisa) {
+        window.location.href='selecao_de_vagas.html'
         return;
     }
     sessionStorage.setItem('pesquisa', valorPesquisa);

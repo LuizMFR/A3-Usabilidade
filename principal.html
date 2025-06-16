@@ -7,20 +7,15 @@
   <script src="script.js" defer></script>
   <style>
     body {
-      margin: 0;
       font-family: 'Inter', Arial, sans-serif;
-      background: #fff;
-      color: #111;
     }
 
     header {
-      width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 24px 48px 24px 32px;
       box-sizing: border-box;
-      border-bottom: 1px solid #f2f2f2;
       background: #fff;
       position: sticky;
       top: 0;
@@ -37,9 +32,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-right: 16px;
-      overflow: hidden;
-      flex-shrink: 0;
+     
     }
 
     .logo img {
@@ -58,9 +51,6 @@
       background: #f5f7fa;
       border-radius: 12px;
       padding: 6px 16px;
-      display: flex;
-      align-items: center;
-      border: 1px solid #eaeaea;
       margin-right: 8px;
     }
 
@@ -69,8 +59,7 @@
       background: transparent;
       outline: none;
       font-size: 1rem;
-      padding: 8px 0;
-      width: 180px;
+      
     }
 
     .publish-btn {
@@ -103,47 +92,36 @@
 
     .hero-card {
       width: 70vw;
-      max-width: 950px;
-      min-width: 320px;
+      
+      
       background: #eee;
       border-radius: 20px;
       overflow: hidden;
       position: relative;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 340px;
       background-image: url('hero.jpg');
-      background-size: cover;
       background-position: center;
-      box-shadow: 0 2px 18px rgba(0, 0, 0, 0.04);
     }
 
     .hero-overlay {
       position: absolute;
       inset: 0;
       background: rgba(24, 24, 24, 0.45);
-      z-index: 1;
     }
 
     .hero-content {
-      position: relative;
+      
       z-index: 2;
       color: #fff;
-      width: 100%;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
       padding: 48px 18px 44px 18px;
       text-align: center;
     }
 
     .hero-title {
       font-size: 2.5rem;
-      font-weight: bold;
       margin-bottom: 16px;
-      line-height: 1.1;
     }
 
     .hero-subtitle {
@@ -159,7 +137,7 @@
       max-width: 430px;
       background: #fff;
       border-radius: 12px;
-      align-items: center;
+
       padding: 6px 8px 6px 18px;
       box-sizing: border-box;
       margin: 0 auto;
@@ -170,9 +148,7 @@
       outline: none;
       font-size: 1.05rem;
       flex: 1;
-      background: transparent;
       padding: 12px 0;
-      color: #222;
     }
 
     .hero-search button {
@@ -184,7 +160,6 @@
       font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
-      margin-left: 8px;
     }
 
     .hero-search button:hover {
@@ -201,7 +176,6 @@
 
     .section-title {
       font-size: 1.35rem;
-      font-weight: 700;
       margin: 32px 0 28px 0;
     }
 
@@ -209,7 +183,7 @@
       display: flex;
       flex-direction: column;
       gap: 38px;
-      margin-bottom: 32px;
+      
     }
 
     .job-item {
@@ -222,16 +196,10 @@
       width: 260px;
       height: 150px;
       border-radius: 16px;
-      object-fit: cover;
       background: #eee;
-      flex-shrink: 0;
     }
 
     .job-info {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
       gap: 8px;
     }
 
@@ -267,21 +235,16 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 28px;
-      margin-top: 18px;
-      margin-bottom: 48px;
+      cursor : pointer;
     }
 
     .category-card {
       display: flex;
       flex-direction: column;
-      align-items: center;
       background: #fafbfc;
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.03);
       min-height: 200px;
-      padding-bottom: 8px;
-      transition: box-shadow 0.18s;
     }
 
     .category-card:hover {
@@ -293,8 +256,6 @@
     .category-img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      background: #eee;
       margin-bottom: 8px;
     }
 

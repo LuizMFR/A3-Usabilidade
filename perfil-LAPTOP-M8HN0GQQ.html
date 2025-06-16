@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Perfil | Tech Vagas</title>
+  <style>
+    body {
+      
+      font-family: 'Inter', Arial, sans-serif;
+      
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 48px 24px 32px;
+      box-sizing: border-box;
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+
+    .logo img {
+      max-width: 60px;
+      max-height: 60px;
+      object-fit: contain;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    header form {
+      background: #f5f7fa;
+      border-radius: 12px;
+      padding: 6px 16px;
+      margin-right: 8px;
+    }
+
+    header input {
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: 1rem;
+      
+    }
+
+    .publish-btn {
+      background: #2196f3;
+      color: #fff;
+      border: none;
+      padding: 10px 26px;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .publish-btn:hover {
+      background: #1976d2;
+    }
+
+    .header-actions .perfil img {
+      max-width: 45px;
+      max-height: 45px;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      padding: 32px 0;
+    }
+
+    .profile-card {
+      
+     
+      box-shadow: 0 2px 12px 0 #0001;
+      padding: 40px 48px 32px 48px;
+      max-width: 700px;
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: #e0e0e0;
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-card h1 {
+      margin: 0;
+      font-size: 1.7rem;
+    }
+
+    .cargo {
+      color: #888;
+      font-size: 1.1rem;
+      margin-bottom: 24px;
+    }
+
+    .info-section {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    .info-section h2 {
+      font-size: 1.08rem;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 1rem;
+      color: #222;
+      margin-bottom: 4px;
+    }
+
+    .info-item .icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    .info-item a {
+      color: #339cff;
+      text-decoration: none;
+    }
+
+    .info-item a:hover {
+      text-decoration: underline;
+    }
+
+    .about-section {
+      margin-bottom: 24px;
+    }
+
+    .about-section h2 {
+      font-size: 1.08rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .about-section p {
+      margin: 0;
+      font-size: 0.98rem;
+    }
+
+    .exp-section {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    .exp-section h2 {
+      font-size: 1.08rem;
+    }
+
+    .exp-item {
+      margin-bottom: 16px;
+    }
+
+    .exp-title {
+      
+      
+      
+    }
+
+    .exp-desc {
+      margin: 2px 0 0 0;
+      color: #888;
+      font-size: 0.97rem;
+    }
+
+    .interesses-section {
+      width: 100%;
+    }
+
+    .interesses-section h2 {
+      font-size: 1.08rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .interesses-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: flex-start;
+    }
+
+    .interesse {
+      background: #f2f2f2;
+      color: #222;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="principal.html"><img src="Imagens/logo_techvagas.png" alt="Logo"></a>
+    </div>
+    <div class="header-actions">
+      <form method="get" onsubmit="salvarDadosPesquisa(event, 'pesquisa-header')">
+        <input type="text" placeholder="Pesquisar" id="pesquisa-header">
+        <button class="publish-btn">Pesquisar vaga</button>
+      </form>
+      <div class="perfil">
+        <a href="perfil.html">
+          <img src="Imagens/perfil.png" alt="perfil">
+        </a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="profile-card">
+      <div class="avatar">
+        <img src="Imagens/avatar.jpg" alt="Avatar" />
+      </div>
+      <h1 id="nome-usuario"></h1>
+      </h1>
+      <span class="cargo">Sua profissão</span>
+
+      <div class="info-section">
+        <h2>Informações pessoais</h2>
+        <p class="info-item">
+          <img src="Imagens/email-icon.webp" alt="E-mail" class="icon">
+          <a href="mailto:nome@email.com.br" id="email-usuario"></a>
+        </p>
+        <p class="info-item">
+          <img src="Imagens/location-icon.png" alt="Localização" class="icon">
+          Xique-xique - BA
+        </p>
+      </div>
+
+      <div class="about-section">
+        <h2>Sobre</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis lorem quis laoreet congue. Nullam
+          tristique augue elit, vitae aliquet massa rhoncus quis. Donec aliquet ipsum non metus volutpat fringilla. Ut
+          ex nunc, fringilla et dignissim ac, sollicitudin quis odio. Phasellus ac ex eleifend, consequat est eget,
+          suscipit mauris. Integer id facilisis justo. Suspendisse ultrices quam leo, id sagittis justo pulvinar nec.
+          Sed gravida metus sed arcu hendrerit tempus.</p>
+      </div>
+
+      <div class="exp-section">
+        <h2>Experiências</h2>
+        <div class="exp-item">
+          <span class="exp-title">&#9679; Empresa 1 – Data início - Data Final</span>
+          <p class="exp-desc">Descrição das atividades</p>
+        </div>
+        <div class="exp-item">
+          <span class="exp-title">&#9679; Empresa 2 – Data início - Data Final</span>
+          <p class="exp-desc">Descrição das atividades</p>
+        </div>
+        <div class="exp-item">
+          <span class="exp-title">&#9679; Empresa 3 – Data início - Data Final</span>
+          <p class="exp-desc">Descrição das atividades</p>
+        </div>
+      </div>
+
+      <div class="interesses-section">
+        <h2>Interesses</h2>
+        <div class="interesses-list">
+          <span class="interesse">Desenvolvedor de software</span>
+          <span class="interesse">Analista de Software</span>
+          <span class="interesse">Desenvolvedor Full Stack</span>
+          <span class="interesse">Técnico de suporte</span>
+          <span class="interesse">Analista de Infraestrutura</span>
+          <span class="interesse">Gerente de Projetos</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    const nome = sessionStorage.getItem('nome');
+    document.getElementById('nome-usuario').textContent = nome ? nome : "Usuário";
+    const email = sessionStorage.getItem('email');
+    document.getElementById('email-usuario').textContent = email ? email : "E-mail";
+  </script>
+</body>
+
+</html>

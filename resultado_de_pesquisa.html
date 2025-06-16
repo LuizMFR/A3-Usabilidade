@@ -66,8 +66,8 @@
       background: transparent;
       outline: none;
       font-size: 1rem;
-      
-      
+
+
     }
 
     .publish-btn {
@@ -97,7 +97,7 @@
 
     .results span {
       font-weight: normal;
-      
+
     }
 
     .tags {
@@ -119,19 +119,31 @@
     .job-card {
       display: flex;
       align-items: center;
-      
       padding: 15px;
       margin-bottom: 15px;
-      
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      background: #fff;
+      border-radius: 10px;
+      min-height: 130px;
     }
 
-    .thumbnail {
-      width: 230px;
-      height: 120px;
-      background-color: #000;
-     
+    .imgContainer {
+      width: 90px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border-radius: 8px;
       margin-right: 20px;
+      flex-shrink: 0;
+    }
+
+    .imgContainer img {
+      max-width: 80px;
+      max-height: 80px;
+      object-fit: contain;
+      display: block;
     }
 
     .job-info h4 {
@@ -155,14 +167,14 @@
     }
 
     .sidebar ul {
-      
+
       padding: 0;
       margin: 0;
     }
 
     .sidebar li {
-      
-      
+
+
       padding: 16px 24px;
       font-size: 18px;
       color: #333;
@@ -223,7 +235,7 @@
         <h3>Resultados encontrados:</h3>
         <div class="job-list">
           <div class="job-card">
-            <div class="thumbnail"></div>
+            <div class="imgContainer"><img src="Imagens/junior.png" alt="vaga junior"></div>
             <div class="job-info">
               <h4 id="vagaJunior"> </h4>
               <p>Empresa S.A.<br>Remoto</p>
@@ -231,7 +243,7 @@
             <a href="visualizacao_de_vaga.html" class="apply-btn">Ver vaga</a>
           </div>
           <div class="job-card">
-            <div class="thumbnail"></div>
+            <div class="imgContainer"><img src="Imagens/pleno.png" alt="vaga junior"></div>
             <div class="job-info">
               <h4 id="vagaPleno"></h4>
               <p>Empresa S.A.<br>Presencial</p>
@@ -239,7 +251,7 @@
             <a href="visualizacao_de_vaga.html" class="apply-btn">Ver vaga</a>
           </div>
           <div class="job-card">
-            <div class="thumbnail"></div>
+            <div class="imgContainer"><img src="Imagens/senior.png" alt="vaga junior"></div>
             <div class="job-info">
               <h4 id="vagaSenior"></h4>
               <p>Desenvolvedores S.A.<br>Híbrido</p>
